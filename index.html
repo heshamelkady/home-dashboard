@@ -396,7 +396,7 @@ body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSyst
 .pi-ic{width:24px;height:24px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
 
 /* Room in SVG */
-.rm{cursor:pointer;transition:var(--tr)}
+.rm{cursor:grab;transition:var(--tr)}
 .rm:hover .rm-f{filter:brightness(1.15)}
 .rm-f{transition:var(--tr)}
 .rm-lbl{font-size:11px;font-weight:600;fill:#fff;text-anchor:middle;dominant-baseline:central;pointer-events:none;text-shadow:0 1px 3px rgba(0,0,0,.7)}
@@ -479,12 +479,13 @@ body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSyst
 
 <div class="wrap">
   <div class="canvas" id="cvs">
-    <div class="mbadge" id="mbadge"><i class="fa-solid fa-pen"></i> Edit Mode — Drag to move, handles to resize</div>
+    <div class="mbadge" id="mbadge"><i class="fa-solid fa-pen"></i> Edit Mode — Right-click for options</div>
     <div class="tip" id="tip"></div>
     <div class="ctx" id="ctx"></div>
     <svg id="mainSvg" viewBox="0 0 800 600">
       <defs>
         <pattern id="grid" patternUnits="userSpaceOnUse" width="20" height="20"><rect width="20" height="20" fill="none"></rect><line x1="20" y1="0" x2="20" y2="20" stroke="#1e2128" stroke-width=".5"></line><line x1="0" y1="20" x2="20" y2="20" stroke="#1e2128" stroke-width=".5"></line></pattern>
+        <pattern id="pst" patternUnits="userSpaceOnUse" width="20" height="8"><rect width="20" height="8" fill="#7a7d88"></rect><line x1="0" y1="4" x2="20" y2="4" stroke="#9a9da8" stroke-width=".8"></line><line x1="0" y1="8" x2="20" y2="8" stroke="#6a6d78" stroke-width=".5"></line></pattern>
         <pattern id="pw" patternUnits="userSpaceOnUse" width="40" height="40"><rect width="40" height="40" fill="#c4b590"></rect><line x1="0" y1="10" x2="40" y2="10" stroke="#b8a87a" stroke-width=".5"></line><line x1="0" y1="20" x2="40" y2="20" stroke="#b8a87a" stroke-width=".5"></line><line x1="0" y1="30" x2="40" y2="30" stroke="#b8a87a" stroke-width=".5"></line></pattern>
         <pattern id="pt" patternUnits="userSpaceOnUse" width="20" height="20"><rect width="20" height="20" fill="#5a6a7a"></rect><rect width="10" height="10" fill="#4d5d6d"></rect><rect x="10" y="10" width="10" height="10" fill="#4d5d6d"></rect></pattern>
         <pattern id="pd" patternUnits="userSpaceOnUse" width="30" height="10"><rect width="30" height="10" fill="#a88c5e"></rect><line x1="0" y1="5" x2="30" y2="5" stroke="#9a7e52" stroke-width=".5"></line></pattern>
@@ -636,6 +637,10 @@ const ROOM_TYPES=[
   {type:'terrace',name:'Terrace/Balcony',icon:'fa-umbrella-beach',fill:'url(#pd)',color:'#a1887f'},
   {type:'nursery',name:'Nursery',icon:'fa-baby',fill:'url(#pw)',color:'#f48fb1'},
   {type:'gym',name:'Gym',icon:'fa-dumbbell',fill:'url(#pw)',color:'#e57373'},
+  {type:'stairs',name:'Stairs',icon:'fa-stairs',fill:'url(#pst)',color:'#b0bec5'},
+  {type:'entry',name:'Entryway',icon:'fa-door-open',fill:'#8a8d97',color:'#90a4ae'},
+  {type:'closet',name:'Walk-in Closet',icon:'fa-shirt',fill:'url(#pw)',color:'#bcaaa4'},
+  {type:'utility',name:'Utility Room',icon:'fa-wrench',fill:'#6d6d6d',color:'#78909c'},
 ];
 
 const DEFS={
@@ -684,7 +689,7 @@ function renderRooms(){
     const rt=ROOM_TYPES.find(x=>x.type===rm.type);
     if(rt){const s=document.createElementNS(ns,'text');s.setAttribute('class','rm-sub');s.setAttribute('x',rm.x+rm.w/2);s.setAttribute('y',rm.y+rm.h/2+14);s.textContent=rt.name;grp.appendChild(s)}
     // Resize handles (visible in edit mode)
-    if(editMode){
+    if(true){
       const hs=6;
       // SE corner
       const hse=document.createElementNS(ns,'rect');hse.setAttribute('class','rh rh-se');hse.setAttribute('x',rm.x+rm.w-hs);hse.setAttribute('y',rm.y+rm.h-hs);hse.setAttribute('width',hs*2);hse.setAttribute('height',hs*2);hse.setAttribute('rx','2');
@@ -701,7 +706,7 @@ function renderRooms(){
     // Drag move in edit mode
     let dr=false,sx,sy;
     grp.addEventListener('mousedown',e=>{
-      if(!editMode||e.target.classList.contains('rh'))return;
+      if(e.target.classList.contains('rh'))return;
       dr=true;const svg=document.getElementById('mainSvg'),sr=svg.getBoundingClientRect(),vb=svg.viewBox.baseVal;
       sx=e.clientX;sy=e.clientY;
       const onM=ev=>{if(!dr)return;const dx=(ev.clientX-sx)/sr.width*vb.width;const dy=(ev.clientY-sy)/sr.height*vb.height;rm.x+=dx;rm.y+=dy;sx=ev.clientX;sy=ev.clientY;renderAll()};
@@ -806,7 +811,7 @@ function renderItems(){
     g.addEventListener('mouseenter',e=>showTip2(e,it));g.addEventListener('mouseleave',hideTip2);
     // Drag
     let dr=false,sx2,sy2;
-    g.addEventListener('mousedown',e=>{if(!editMode)return;dr=true;const svg=document.getElementById('mainSvg'),sr=svg.getBoundingClientRect(),vb=svg.viewBox.baseVal;sx2=e.clientX;sy2=e.clientY;
+    g.addEventListener('mousedown',e=>{dr=true;const svg=document.getElementById('mainSvg'),sr=svg.getBoundingClientRect(),vb=svg.viewBox.baseVal;sx2=e.clientX;sy2=e.clientY;
       const onM=ev=>{if(!dr)return;const dx=(ev.clientX-sx2)/sr.width*vb.width;const dy=(ev.clientY-sy2)/sr.height*vb.height;it.x+=dx;it.y+=dy;sx2=ev.clientX;sy2=ev.clientY;renderItems()};
       const onU=()=>{dr=false;it.room=findRoom2(it.x,it.y)||it.room;save();document.removeEventListener('mousemove',onM);document.removeEventListener('mouseup',onU)};
       document.addEventListener('mousemove',onM);document.addEventListener('mouseup',onU);e.stopPropagation()})

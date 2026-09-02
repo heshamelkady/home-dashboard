@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Assistant 3D Floor Plan Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --ha-bg: #111318;
+  --ha-surface: #1c1f27;
+  --ha-surface-hover: #252830;
+  --ha-card: #1e2128;
+  --ha-border: #2a2d36;
+  --ha-primary: #03a9f4;
+  --ha-accent: #ff9800;
+  --ha-success: #4caf50;
+  --ha-warning: #ff9800;
+  --ha-error: #f44336;
+  --ha-text: #e1e3e8;
+  --ha-text-dim: #8e929a;
+  --ha-text-muted: #5a5e68;
+  --tr: 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ha-bg);color:var(--ha-text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;overflow-x:hidden}
+
+/* Header */
+.header{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:var(--ha-surface);border-bottom:1px solid var(--ha-border);position:sticky;top:0;z-index:100;flex-wrap:wrap;gap:8px}
+.header-left{display:flex;align-items:center;gap:10px}
+.header h1{font-size:16px;font-weight:600}
+.header h1 i{color:var(--ha-primary)}
+.header-right{display:flex;gap:6px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:7px 12px;border-radius:8px;border:1px solid var(--ha-border);background:var(--ha-surface);color:var(--ha-text);font-size:11px;font-weight:500;cursor:pointer;transition:var(--tr);white-space:nowrap}
+.btn:hover{background:var(--ha-surface-hover);border-color:var(--ha-primary)}
+.btn.active,.btn.primary{background:var(--ha-primary);border-color:var(--ha-primary);color:#fff}
+.btn.sm{padding:4px 8px;font-size:10px}
+
+/* Floor Tabs */
+.floor-tabs{display:flex;gap:0;padding:0 20px;background:var(--ha-surface);border-bottom:1px solid var(--ha-border)}
+.floor-tab{padding:10px 16px;font-size:12px;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;color:var(--ha-text-dim);transition:var(--tr)}
+.floor-tab:hover{color:var(--ha-text)}
+.floor-tab.active{color:var(--ha-primary);border-bottom-color:var(--ha-primary)}
+
+/* Layout */
+.main{display:flex;height:calc(100vh - 94px)}
+.canvas-area{flex:1;position:relative;overflow:hidden}
+.sidebar{width:280px;background:var(--ha-surface);border-left:1px solid var(--ha-border);overflow-y:auto;transition:var(--tr);flex-shrink:0}
+.sidebar.hidden{width:0;overflow:hidden;border:none}
+.sidebar-header{padding:12px 14px;border-bottom:1px solid var(--ha-border);font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:space-between}
+
+/* Sidebar Tabs */
+.sidebar-tabs{display:flex;border-bottom:1px solid var(--ha-border)}
+.sidebar-tab{flex:1;padding:8px;font-size:11px;font-weight:600;text-align:center;cursor:pointer;color:var(--ha-text-dim);border-bottom:2px solid transparent;transition:var(--tr)}
+.sidebar-tab:hover{color:var(--ha-text)}
+.sidebar-tab.active{color:var(--ha-primary);border-bottom-color:var(--ha-primary)}
+.sidebar-panel{display:none;padding:10px}
+.sidebar-panel.active{display:block}
+
+/* SVG floor */
+.floor-container{display:none;width:100%;height:100%;position:relative}
+.floor-container.active{display:block}
+.floor-svg{width:100%;height:100%}
+.room{cursor:pointer;transition:var(--tr)}
+.room:hover .room-fill{opacity:0.85;filter:brightness(1.12)}
+.room-fill{transition:var(--tr)}
+.room-label{font-size:11px;font-weight:600;fill:#fff;text-anchor:middle;dominant-baseline:central;pointer-events:none;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.room-sublabel{font-size:9px;fill:rgba(255,255,255,.7);text-anchor:middle;dominant-baseline:central;pointer-events:none}
+
+/* Device & Furniture Markers */
+.marker{cursor:pointer;transition:var(--tr)}
+.marker:hover{filter:brightness(1.3)}
+.marker-bg{transition:var(--tr)}
+.marker.on .marker-bg{filter:drop-shadow(0 0 6px rgba(3,169,244,.5))}
+
+/* Palette items */
+.palette-section{margin-bottom:12px}
+.palette-section-title{font-size:10px;font-weight:700;color:var(--ha-text-dim);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;padding:0 4px}
+.palette-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;cursor:grab;border:1px solid var(--ha-border);background:var(--ha-card);margin-bottom:5px;transition:var(--tr);font-size:11px}
+.palette-item:hover{border-color:var(--ha-primary);background:var(--ha-surface-hover)}
+.palette-item:active{cursor:grabbing}
+.pi-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+
+/* Tooltip */
+.tooltip{position:absolute;background:var(--ha-card);border:1px solid var(--ha-border);border-radius:8px;padding:10px 14px;font-size:11px;pointer-events:none;z-index:50;box-shadow:0 4px 20px rgba(0,0,0,.4);opacity:0;transition:opacity .15s ease;min-width:140px}
+.tooltip.show{opacity:1}
+.tt-name{font-weight:600;margin-bottom:2px}
+.tt-state{font-size:10px}
+
+/* Context Menu */
+.ctx-menu{position:absolute;z-index:200;background:var(--ha-card);border:1px solid var(--ha-border);border-radius:8px;padding:4px;box-shadow:0 4px 20px rgba(0,0,0,.4);min-width:170px;display:none}
+.ctx-menu.show{display:block}
+.ctx-item{display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:6px;cursor:pointer;font-size:11px;transition:var(--tr)}
+.ctx-item:hover{background:var(--ha-surface-hover)}
+.ctx-item i{width:14px;text-align:center;color:var(--ha-text-dim);font-size:11px}
+.ctx-item.danger{color:var(--ha-error)}
+.ctx-item.danger i{color:var(--ha-error)}
+.ctx-divider{height:1px;background:var(--ha-border);margin:3px 0}
+
+/* Mode badge */
+.mode-badge{position:absolute;top:10px;left:10px;z-index:30;padding:5px 10px;border-radius:6px;font-size:10px;font-weight:600;background:var(--ha-primary);color:#fff;display:none;box-shadow:0 2px 12px rgba(0,0,0,.3)}
+.mode-badge.show{display:flex;align-items:center;gap:5px}
+
+/* Status bar */
+.status-bar{display:flex;align-items:center;justify-content:space-between;padding:6px 20px;background:var(--ha-surface);border-top:1px solid var(--ha-border);font-size:10px;color:var(--ha-text-dim)}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--ha-success);display:inline-block;margin-right:5px}
+
+/* Placed items list */
+.placed-item{display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:6px;border:1px solid var(--ha-border);background:var(--ha-card);margin-bottom:4px;font-size:11px}
+.placed-item .pi-info{flex:1;min-width:0}
+.placed-item .pi-name{font-weight:600;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.placed-item .pi-sub{font-size:9px;color:var(--ha-text-dim)}
+.toggle-sw{width:32px;height:18px;border-radius:9px;cursor:pointer;position:relative;transition:var(--tr);flex-shrink:0}
+.toggle-sw.on{background:var(--ha-primary)}
+.toggle-sw.off{background:#3a3d47}
+.toggle-sw::after{content:'';position:absolute;width:14px;height:14px;border-radius:50%;background:#fff;top:2px;transition:var(--tr)}
+.toggle-sw.on::after{left:16px}
+.toggle-sw.off::after{left:2px}
+.del-btn{cursor:pointer;color:var(--ha-text-muted);padding:3px;transition:var(--tr);font-size:10px}
+.del-btn:hover{color:var(--ha-error)}
+
+/* Room editor */
+.editor-field{margin-bottom:12px}
+.editor-field label{display:block;font-size:10px;font-weight:600;color:var(--ha-text-dim);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.editor-field input,.editor-field select{width:100%;padding:7px 10px;border-radius:6px;border:1px solid var(--ha-border);background:var(--ha-card);color:var(--ha-text);font-size:12px;outline:none;transition:var(--tr)}
+.editor-field input:focus{border-color:var(--ha-primary)}
+.color-row{display:flex;gap:5px;flex-wrap:wrap}
+.cswatch{width:24px;height:24px;border-radius:5px;cursor:pointer;border:2px solid transparent;transition:var(--tr)}
+.cswatch.active{border-color:#fff}
+.cswatch:hover{transform:scale(1.1)}
+
+/* Resize handle */
+.resize-handle{cursor:nwse-resize;opacity:0;transition:opacity .2s}
+.marker:hover .resize-handle{opacity:.6}
+
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.pulsing{animation:pulse 2s ease-in-out infinite}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <h1><i class="fa-solid fa-house-signal"></i> Smart Home Dashboard</h1>
+  </div>
+  <div class="header-right">
+    <button class="btn" id="btnEdit" onclick="toggleEditMode()"><i class="fa-solid fa-pen"></i> Edit</button>
+    <button class="btn" id="btnSidebar" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i> Panel</button>
+    <button class="btn" onclick="exportConfig()"><i class="fa-solid fa-download"></i> Export</button>
+    <button class="btn" onclick="importConfig()"><i class="fa-solid fa-upload"></i> Import</button>
+  </div>
+</div>
+
+<div class="floor-tabs" id="floorTabs">
+  <div class="floor-tab active" data-floor="0" onclick="switchFloor(0)"><i class="fa-solid fa-stairs"></i> Floor 1</div>
+  <div class="floor-tab" data-floor="1" onclick="switchFloor(1)"><i class="fa-solid fa-stairs"></i> Floor 2</div>
+  <div class="floor-tab" data-floor="2" onclick="switchFloor(2)"><i class="fa-solid fa-stairs"></i> Floor 3</div>
+</div>
+
+<div class="main">
+  <div class="canvas-area" id="canvasArea">
+    <div class="mode-badge" id="modeBadge"><i class="fa-solid fa-pen"></i> Edit Mode — Drag items to reposition</div>
+    <div class="tooltip" id="tooltip"></div>
+    <div class="ctx-menu" id="ctxMenu"></div>
+
+    <!-- FLOOR 1 -->
+    <div class="floor-container active" data-floor="0">
+      <svg viewBox="0 0 800 600" class="floor-svg" id="svg-0">
+        <defs>
+          <pattern id="w0" patternUnits="userSpaceOnUse" width="40" height="40"><rect width="40" height="40" fill="#c4b590"></rect><line x1="0" y1="10" x2="40" y2="10" stroke="#b8a87a" stroke-width=".5"></line><line x1="0" y1="20" x2="40" y2="20" stroke="#b8a87a" stroke-width=".5"></line><line x1="0" y1="30" x2="40" y2="30" stroke="#b8a87a" stroke-width=".5"></line></pattern>
+          <pattern id="t0" patternUnits="userSpaceOnUse" width="20" height="20"><rect width="20" height="20" fill="#8a9aaa"></rect><rect width="10" height="10" fill="#7d8d9d"></rect><rect x="10" y="10" width="10" height="10" fill="#7d8d9d"></rect></pattern>
+          <pattern id="d0" patternUnits="userSpaceOnUse" width="30" height="10"><rect width="30" height="10" fill="#a88c5e"></rect><line x1="0" y1="5" x2="30" y2="5" stroke="#9a7e52" stroke-width=".5"></line></pattern>
+        </defs>
+        <rect x="80" y="60" width="640" height="480" rx="8" fill="none" stroke="#5a5d68" stroke-width="12"></rect>
+        <g class="room" data-room="Master Bedroom" onclick="selectRoom(this)"><rect class="room-fill" x="86" y="66" width="260" height="250" rx="4" fill="url(#w0)" opacity=".7"></rect><text class="room-label" x="216" y="180">Master Bedroom</text></g>
+        <g class="room" data-room="Hallway F1" onclick="selectRoom(this)"><rect class="room-fill" x="346" y="66" width="110" height="474" rx="4" fill="#8a8d97" opacity=".5"></rect><text class="room-label" x="401" y="300">Hallway</text></g>
+        <g class="room" data-room="Living Room F1" onclick="selectRoom(this)"><rect class="room-fill" x="456" y="66" width="258" height="300" rx="4" fill="url(#w0)" opacity=".7"></rect><text class="room-label" x="585" y="200">Living Room</text></g>
+        <g class="room" data-room="Office" onclick="selectRoom(this)"><rect class="room-fill" x="86" y="316" width="260" height="218" rx="4" fill="url(#w0)" opacity=".6"></rect><text class="room-label" x="216" y="420">Office</text></g>
+        <g class="room" data-room="Bathroom F1" onclick="selectRoom(this)"><rect class="room-fill" x="456" y="366" width="258" height="168" rx="4" fill="url(#t0)" opacity=".6"></rect><text class="room-label" x="585" y="445">Bathroom</text></g>
+        <g class="room" data-room="Balcony F1" onclick="selectRoom(this)"><rect class="room-fill" x="500" y="10" width="220" height="56" rx="4" fill="url(#d0)" opacity=".7"></rect><text class="room-label" x="610" y="40">Balcony</text></g>
+        <line x1="346" y1="66" x2="346" y2="540" stroke="#5a5d68" stroke-width="6"></line><line x1="456" y1="66" x2="456" y2="540" stroke="#5a5d68" stroke-width="6"></line>
+        <line x1="86" y1="316" x2="456" y2="316" stroke="#5a5d68" stroke-width="6"></line><line x1="456" y1="366" x2="714" y2="366" stroke="#5a5d68" stroke-width="6"></line>
+        <g transform="translate(370,160)"><rect width="60" height="80" rx="4" fill="none" stroke="#fff" stroke-width="1.5" opacity=".25"></rect><line x1="0" y1="16" x2="60" y2="16" stroke="#fff" stroke-width="1" opacity=".25"></line><line x1="0" y1="32" x2="60" y2="32" stroke="#fff" stroke-width="1" opacity=".25"></line><line x1="0" y1="48" x2="60" y2="48" stroke="#fff" stroke-width="1" opacity=".25"></line><line x1="0" y1="64" x2="60" y2="64" stroke="#fff" stroke-width="1" opacity=".25"></line></g>
+        <g id="furniture-0"></g><g id="devices-0"></g>
+      </svg>
+    </div>
+
+    <!-- FLOOR 2 -->
+    <div class="floor-container" data-floor="1">
+      <svg viewBox="0 0 800 600" class="floor-svg" id="svg-1">
+        <defs>
+          <pattern id="w1" patternUnits="userSpaceOnUse" width="40" height="40"><rect width="40" height="40" fill="#c4b590"></rect><line x1="0" y1="10" x2="40" y2="10" stroke="#b8a87a" stroke-width=".5"></line><line x1="0" y1="20" x2="40" y2="20" stroke="#b8a87a" stroke-width=".5"></line><line x1="0" y1="30" x2="40" y2="30" stroke="#b8a87a" stroke-width=".5"></line></pattern>
+          <pattern id="t1" patternUnits="userSpaceOnUse" width="20" height="20"><rect width="20" height="20" fill="#3a4a5a"></rect><rect width="10" height="10" fill="#334455"></rect><rect x="10" y="10" width="10" height="10" fill="#334455"></rect></pattern>
+        </defs>
+        <rect x="80" y="60" width="640" height="480" rx="8" fill="none" stroke="#5a5d68" stroke-width="12"></rect>
+        <g class="room" data-room="Kitchen" onclick="selectRoom(this)"><rect class="room-fill" x="86" y="66" width="260" height="220" rx="4" fill="url(#w1)" opacity=".6"></rect><text class="room-label" x="216" y="170">Kitchen</text></g>
+        <g class="room" data-room="Bedroom 2" onclick="selectRoom(this)"><rect class="room-fill" x="86" y="286" width="260" height="248" rx="4" fill="url(#w1)" opacity=".7"></rect><text class="room-label" x="216" y="400">Bedroom 2</text></g>
+        <g class="room" data-room="Hallway F2" onclick="selectRoom(this)"><rect class="room-fill" x="346" y="66" width="110" height="474" rx="4" fill="#8a8d97" opacity=".5"></rect><text class="room-label" x="401" y="300">Hallway</text></g>
+        <g class="room" data-room="Living Room F2" onclick="selectRoom(this)"><rect class="room-fill" x="456" y="66" width="258" height="260" rx="4" fill="url(#w1)" opacity=".7"></rect><text class="room-label" x="585" y="190">Living Room</text></g>
+        <g class="room" data-room="Guest Room" onclick="selectRoom(this)"><rect class="room-fill" x="456" y="326" width="258" height="100" rx="4" fill="url(#w1)" opacity=".6"></rect><text class="room-label" x="585" y="376">Guest Room</text></g>
+        <g class="room" data-room="Bathroom F2" onclick="selectRoom(this)"><rect class="room-fill" x="456" y="426" width="258" height="108" rx="4" fill="url(#t1)" opacity=".7"></rect><text class="room-label" x="585" y="478">Bathroom</text></g>
+        <line x1="346" y1="66" x2="346" y2="540" stroke="#5a5d68" stroke-width="6"></line><line x1="456" y1="66" x2="456" y2="540" stroke="#5a5d68" stroke-width="6"></line>
+        <line x1="86" y1="286" x2="456" y2="286" stroke="#5a5d68" stroke-width="6"></line><line x1="456" y1="326" x2="714" y2="326" stroke="#5a5d68" stroke-width="6"></line><line x1="456" y1="426" x2="714" y2="426" stroke="#5a5d68" stroke-width="6"></line>
+        <g transform="translate(370,160)"><rect width="60" height="80" rx="4" fill="none" stroke="#fff" stroke-width="1.5" opacity=".25"></rect><line x1="0" y1="16" x2="60" y2="16" stroke="#fff" stroke-width="1" opacity=".25"></line><line x1="0" y1="32" x2="60" y2="32" stroke="#fff" stroke-width="1" opacity=".25"></line><line x1="0" y1="48" x2="60" y2="48" stroke="#fff" stroke-width="1" opacity=".25"></line><line x1="0" y1="64" x2="60" y2="64" stroke="#fff" stroke-width="1" opacity=".25"></line></g>
+        <g id="furniture-1"></g><g id="devices-1"></g>
+      </svg>
+    </div>
+
+    <!-- FLOOR 3 -->
+    <div class="floor-container" data-floor="2">
+      <svg viewBox="0 0 800 650" class="floor-svg" id="svg-2">
+        <defs>
+          <pattern id="w2" patternUnits="userSpaceOnUse" width="40" height="40"><rect width="40" height="40" fill="#c4b590"></rect><line x1="0" y1="10" x2="40" y2="10" stroke="#b8a87a" stroke-width=".5"></line><line x1="0" y1="20" x2="40" y2="20" stroke="#b8a87a" stroke-width=".5"></line><line x1="0" y1="30" x2="40" y2="30" stroke="#b8a87a" stroke-width=".5"></line></pattern>
+          <pattern id="d2" patternUnits="userSpaceOnUse" width="30" height="10"><rect width="30" height="10" fill="#a88c5e"></rect><line x1="0" y1="5" x2="30" y2="5" stroke="#9a7e52" stroke-width=".5"></line></pattern>
+          <pattern id="t2" patternUnits="userSpaceOnUse" width="20" height="20"><rect width="20" height="20" fill="#3a4a5a"></rect><rect width="10" height="10" fill="#334455"></rect><rect x="10" y="10" width="10" height="10" fill="#334455"></rect></pattern>
+        </defs>
+        <g class="room" data-room="Terrace" onclick="selectRoom(this)"><rect class="room-fill" x="80" y="20" width="640" height="180" rx="8" fill="url(#d2)" opacity=".75"></rect><text class="room-label" x="400" y="90">Terrace</text><text class="room-sublabel" x="400" y="108">Pool &amp; Dining</text></g>
+        <rect x="80" y="200" width="640" height="420" rx="8" fill="none" stroke="#5a5d68" stroke-width="12"></rect>
+        <g class="room" data-room="Open Kitchen &amp; Living" onclick="selectRoom(this)"><rect class="room-fill" x="86" y="206" width="380" height="408" rx="4" fill="url(#w2)" opacity=".7"></rect><text class="room-label" x="276" y="360">Open Kitchen &amp; Living</text></g>
+        <g class="room" data-room="Hallway F3" onclick="selectRoom(this)"><rect class="room-fill" x="466" y="206" width="80" height="408" rx="4" fill="#8a8d97" opacity=".5"></rect><text class="room-label" x="506" y="400">Hall</text></g>
+        <g class="room" data-room="Bathroom F3" onclick="selectRoom(this)"><rect class="room-fill" x="546" y="206" width="168" height="170" rx="4" fill="url(#t2)" opacity=".7"></rect><text class="room-label" x="630" y="290">Bathroom</text></g>
+        <g class="room" data-room="Bedroom 3" onclick="selectRoom(this)"><rect class="room-fill" x="546" y="376" width="168" height="238" rx="4" fill="url(#w2)" opacity=".7"></rect><text class="room-label" x="630" y="490">Bedroom 3</text></g>
+        <line x1="466" y1="206" x2="466" y2="614" stroke="#5a5d68" stroke-width="6"></line><line x1="546" y1="206" x2="546" y2="614" stroke="#5a5d68" stroke-width="6"></line><line x1="546" y1="376" x2="714" y2="376" stroke="#5a5d68" stroke-width="6"></line>
+        <rect x="100" y="40" width="120" height="60" rx="20" fill="rgba(3,169,244,.2)" stroke="rgba(3,169,244,.4)" stroke-width="1.5"></rect>
+        <g transform="translate(476,260)"><rect width="50" height="70" rx="4" fill="none" stroke="#fff" stroke-width="1.5" opacity=".25"></rect><line x1="0" y1="14" x2="50" y2="14" stroke="#fff" stroke-width="1" opacity=".25"></line><line x1="0" y1="28" x2="50" y2="28" stroke="#fff" stroke-width="1" opacity=".25"></line><line x1="0" y1="42" x2="50" y2="42" stroke="#fff" stroke-width="1" opacity=".25"></line><line x1="0" y1="56" x2="50" y2="56" stroke="#fff" stroke-width="1" opacity=".25"></line></g>
+        <g id="furniture-2"></g><g id="devices-2"></g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span id="sidebarTitle"><i class="fa-solid fa-microchip"></i> Add Items</span>
+      <button class="btn sm" onclick="toggleSidebar()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="sidebar-tabs">
+      <div class="sidebar-tab active" data-panel="devices" onclick="switchPanel('devices')"><i class="fa-solid fa-microchip"></i> Devices</div>
+      <div class="sidebar-tab" data-panel="furniture" onclick="switchPanel('furniture')"><i class="fa-solid fa-couch"></i> Furniture</div>
+      <div class="sidebar-tab" data-panel="rooms" onclick="switchPanel('rooms')"><i class="fa-solid fa-vector-square"></i> Rooms</div>
+      <div class="sidebar-tab" data-panel="placed" onclick="switchPanel('placed')"><i class="fa-solid fa-list"></i> Placed</div>
+    </div>
+
+    <!-- DEVICES PANEL -->
+    <div class="sidebar-panel active" id="panel-devices">
+      <div class="palette-section"><div class="palette-section-title">Lighting</div>
+        <div class="palette-item" draggable="true" data-type="light" data-cat="device"><div class="pi-icon" style="background:rgba(255,235,59,.15);color:#ffeb3b"><i class="fa-solid fa-lightbulb"></i></div><div>Light</div></div>
+        <div class="palette-item" draggable="true" data-type="dimmer" data-cat="device"><div class="pi-icon" style="background:rgba(255,235,59,.15);color:#ffeb3b"><i class="fa-solid fa-sun"></i></div><div>Dimmer</div></div>
+        <div class="palette-item" draggable="true" data-type="led_strip" data-cat="device"><div class="pi-icon" style="background:rgba(255,235,59,.15);color:#ffeb3b"><i class="fa-solid fa-wand-magic-sparkles"></i></div><div>LED Strip</div></div>
+      </div>
+      <div class="palette-section"><div class="palette-section-title">Security</div>
+        <div class="palette-item" draggable="true" data-type="lock" data-cat="device"><div class="pi-icon" style="background:rgba(76,175,80,.15);color:#4caf50"><i class="fa-solid fa-lock"></i></div><div>Smart Lock</div></div>
+        <div class="palette-item" draggable="true" data-type="camera" data-cat="device"><div class="pi-icon" style="background:rgba(244,67,54,.15);color:#f44336"><i class="fa-solid fa-video"></i></div><div>Camera</div></div>
+        <div class="palette-item" draggable="true" data-type="motion" data-cat="device"><div class="pi-icon" style="background:rgba(156,39,176,.15);color:#9c27b0"><i class="fa-solid fa-person-walking"></i></div><div>Motion Sensor</div></div>
+        <div class="palette-item" draggable="true" data-type="door_sensor" data-cat="device"><div class="pi-icon" style="background:rgba(156,39,176,.15);color:#9c27b0"><i class="fa-solid fa-door-open"></i></div><div>Door/Window Sensor</div></div>
+        <div class="palette-item" draggable="true" data-type="alarm" data-cat="device"><div class="pi-icon" style="background:rgba(244,67,54,.15);color:#f44336"><i class="fa-solid fa-bell"></i></div><div>Alarm Panel</div></div>
+      </div>
+      <div class="palette-section"><div class="palette-section-title">Climate</div>
+        <div class="palette-item" draggable="true" data-type="thermostat" data-cat="device"><div class="pi-icon" style="background:rgba(3,169,244,.15);color:#03a9f4"><i class="fa-solid fa-temperature-half"></i></div><div>Thermostat</div></div>
+        <div class="palette-item" draggable="true" data-type="humidity" data-cat="device"><div class="pi-icon" style="background:rgba(3,169,244,.15);color:#03a9f4"><i class="fa-solid fa-droplet"></i></div><div>Humidity</div></div>
+        <div class="palette-item" draggable="true" data-type="fan" data-cat="device"><div class="pi-icon" style="background:rgba(3,169,244,.15);color:#03a9f4"><i class="fa-solid fa-fan"></i></div><div>Fan</div></div>
+      </div>
+      <div class="palette-section"><div class="palette-section-title">Media &amp; Other</div>
+        <div class="palette-item" draggable="true" data-type="speaker" data-cat="device"><div class="pi-icon" style="background:rgba(255,152,0,.15);color:#ff9800"><i class="fa-solid fa-volume-high"></i></div><div>Speaker</div></div>
+        <div class="palette-item" draggable="true" data-type="tv" data-cat="device"><div class="pi-icon" style="background:rgba(255,152,0,.15);color:#ff9800"><i class="fa-solid fa-tv"></i></div><div>Smart TV</div></div>
+        <div class="palette-item" draggable="true" data-type="plug" data-cat="device"><div class="pi-icon" style="background:rgba(0,150,136,.15);color:#009688"><i class="fa-solid fa-plug"></i></div><div>Smart Plug</div></div>
+        <div class="palette-item" draggable="true" data-type="vacuum" data-cat="device"><div class="pi-icon" style="background:rgba(96,125,139,.15);color:#607d8b"><i class="fa-solid fa-robot"></i></div><div>Robot Vacuum</div></div>
+        <div class="palette-item" draggable="true" data-type="blind" data-cat="device"><div class="pi-icon" style="background:rgba(0,150,136,.15);color:#009688"><i class="fa-solid fa-bars-staggered"></i></div><div>Blinds/Shutter</div></div>
+        <div class="palette-item" draggable="true" data-type="garage" data-cat="device"><div class="pi-icon" style="background:rgba(0,150,136,.15);color:#009688"><i class="fa-solid fa-warehouse"></i></div><div>Garage Door</div></div>
+      </div>
+    </div>
+
+    <!-- FURNITURE PANEL -->
+    <div class="sidebar-panel" id="panel-furniture">
+      <div class="palette-section"><div class="palette-section-title">Bedroom</div>
+        <div class="palette-item" draggable="true" data-type="bed_double" data-cat="furniture"><div class="pi-icon" style="background:rgba(161,136,127,.2);color:#a1887f"><i class="fa-solid fa-bed"></i></div><div>Double Bed</div></div>
+        <div class="palette-item" draggable="true" data-type="bed_single" data-cat="furniture"><div class="pi-icon" style="background:rgba(161,136,127,.2);color:#a1887f"><i class="fa-solid fa-bed"></i></div><div>Single Bed</div></div>
+        <div class="palette-item" draggable="true" data-type="wardrobe" data-cat="furniture"><div class="pi-icon" style="background:rgba(161,136,127,.2);color:#a1887f"><i class="fa-solid fa-door-closed"></i></div><div>Wardrobe</div></div>
+        <div class="palette-item" draggable="true" data-type="nightstand" data-cat="furniture"><div class="pi-icon" style="background:rgba(161,136,127,.2);color:#a1887f"><i class="fa-solid fa-box"></i></div><div>Nightstand</div></div>
+      </div>
+      <div class="palette-section"><div class="palette-section-title">Living Room</div>
+        <div class="palette-item" draggable="true" data-type="sofa" data-cat="furniture"><div class="pi-icon" style="background:rgba(121,134,203,.2);color:#7986cb"><i class="fa-solid fa-couch"></i></div><div>Sofa</div></div>
+        <div class="palette-item" draggable="true" data-type="armchair" data-cat="furniture"><div class="pi-icon" style="background:rgba(121,134,203,.2);color:#7986cb"><i class="fa-solid fa-chair"></i></div><div>Armchair</div></div>
+        <div class="palette-item" draggable="true" data-type="coffee_table" data-cat="furniture"><div class="pi-icon" style="background:rgba(121,134,203,.2);color:#7986cb"><i class="fa-solid fa-table"></i></div><div>Coffee Table</div></div>
+        <div class="palette-item" draggable="true" data-type="bookshelf" data-cat="furniture"><div class="pi-icon" style="background:rgba(121,134,203,.2);color:#7986cb"><i class="fa-solid fa-book-open"></i></div><div>Bookshelf</div></div>
+        <div class="palette-item" draggable="true" data-type="tv_stand" data-cat="furniture"><div class="pi-icon" style="background:rgba(121,134,203,.2);color:#7986cb"><i class="fa-solid fa-tv"></i></div><div>TV Stand</div></div>
+        <div class="palette-item" draggable="true" data-type="rug" data-cat="furniture"><div class="pi-icon" style="background:rgba(121,134,203,.2);color:#7986cb"><i class="fa-solid fa-square"></i></div><div>Rug</div></div>
+      </div>
+      <div class="palette-section"><div class="palette-section-title">Kitchen / Dining</div>
+        <div class="palette-item" draggable="true" data-type="dining_table" data-cat="furniture"><div class="pi-icon" style="background:rgba(255,183,77,.2);color:#ffb74d"><i class="fa-solid fa-table"></i></div><div>Dining Table</div></div>
+        <div class="palette-item" draggable="true" data-type="chair" data-cat="furniture"><div class="pi-icon" style="background:rgba(255,183,77,.2);color:#ffb74d"><i class="fa-solid fa-chair"></i></div><div>Chair</div></div>
+        <div class="palette-item" draggable="true" data-type="fridge" data-cat="furniture"><div class="pi-icon" style="background:rgba(255,183,77,.2);color:#ffb74d"><i class="fa-solid fa-snowflake"></i></div><div>Fridge</div></div>
+        <div class="palette-item" draggable="true" data-type="stove" data-cat="furniture"><div class="pi-icon" style="background:rgba(255,183,77,.2);color:#ffb74d"><i class="fa-solid fa-fire-burner"></i></div><div>Stove / Oven</div></div>
+        <div class="palette-item" draggable="true" data-type="sink" data-cat="furniture"><div class="pi-icon" style="background:rgba(255,183,77,.2);color:#ffb74d"><i class="fa-solid fa-faucet-drip"></i></div><div>Sink</div></div>
+        <div class="palette-item" draggable="true" data-type="counter" data-cat="furniture"><div class="pi-icon" style="background:rgba(255,183,77,.2);color:#ffb74d"><i class="fa-solid fa-border-top-left"></i></div><div>Counter / Island</div></div>
+      </div>
+      <div class="palette-section"><div class="palette-section-title">Bathroom</div>
+        <div class="palette-item" draggable="true" data-type="shower" data-cat="furniture"><div class="pi-icon" style="background:rgba(77,208,225,.2);color:#4dd0e1"><i class="fa-solid fa-shower"></i></div><div>Shower</div></div>
+        <div class="palette-item" draggable="true" data-type="bathtub" data-cat="furniture"><div class="pi-icon" style="background:rgba(77,208,225,.2);color:#4dd0e1"><i class="fa-solid fa-bath"></i></div><div>Bathtub</div></div>
+        <div class="palette-item" draggable="true" data-type="toilet" data-cat="furniture"><div class="pi-icon" style="background:rgba(77,208,225,.2);color:#4dd0e1"><i class="fa-solid fa-toilet"></i></div><div>Toilet</div></div>
+        <div class="palette-item" draggable="true" data-type="basin" data-cat="furniture"><div class="pi-icon" style="background:rgba(77,208,225,.2);color:#4dd0e1"><i class="fa-solid fa-faucet"></i></div><div>Wash Basin</div></div>
+      </div>
+      <div class="palette-section"><div class="palette-section-title">Office / Other</div>
+        <div class="palette-item" draggable="true" data-type="desk" data-cat="furniture"><div class="pi-icon" style="background:rgba(179,157,219,.2);color:#b39ddb"><i class="fa-solid fa-desktop"></i></div><div>Desk</div></div>
+        <div class="palette-item" draggable="true" data-type="office_chair" data-cat="furniture"><div class="pi-icon" style="background:rgba(179,157,219,.2);color:#b39ddb"><i class="fa-solid fa-chair"></i></div><div>Office Chair</div></div>
+        <div class="palette-item" draggable="true" data-type="plant" data-cat="furniture"><div class="pi-icon" style="background:rgba(129,199,132,.2);color:#81c784"><i class="fa-solid fa-leaf"></i></div><div>Plant</div></div>
+        <div class="palette-item" draggable="true" data-type="lamp" data-cat="furniture"><div class="pi-icon" style="background:rgba(255,235,59,.2);color:#ffeb3b"><i class="fa-solid fa-lamp-desk"></i></div><div>Floor Lamp</div></div>
+      </div>
+    </div>
+
+    <!-- ROOMS PANEL -->
+    <div class="sidebar-panel" id="panel-rooms">
+      <div id="roomEditorContent" style="padding:4px">
+        <p style="font-size:11px;color:var(--ha-text-dim);text-align:center;padding:20px 0">Click a room on the floor plan to edit</p>
+      </div>
+    </div>
+
+    <!-- PLACED ITEMS PANEL -->
+    <div class="sidebar-panel" id="panel-placed">
+      <div id="placedList"></div>
+    </div>
+  </div>
+</div>
+
+<div class="status-bar">
+  <div><span class="status-dot"></span>Ready — <span id="haUrl" style="cursor:pointer;color:var(--ha-primary)" onclick="setHaUrl()">Set HA URL</span></div>
+  <div id="itemCount">0 items</div>
+</div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────
+let currentFloor=0, editMode=false, items=[], idCtr=0, selectedRoomEl=null, haBaseUrl='';
+
+const DEFS = {
+  // Devices
+  light:{name:'Light',icon:'fa-lightbulb',color:'#ffeb3b',cat:'device',entity:'light.',w:28,h:28},
+  dimmer:{name:'Dimmer',icon:'fa-sun',color:'#ffeb3b',cat:'device',entity:'light.',w:28,h:28},
+  led_strip:{name:'LED Strip',icon:'fa-wand-magic-sparkles',color:'#ffeb3b',cat:'device',entity:'light.',w:28,h:28},
+  lock:{name:'Lock',icon:'fa-lock',color:'#4caf50',cat:'device',entity:'lock.',w:28,h:28},
+  camera:{name:'Camera',icon:'fa-video',color:'#f44336',cat:'device',entity:'camera.',w:28,h:28},
+  motion:{name:'Motion',icon:'fa-person-walking',color:'#9c27b0',cat:'device',entity:'binary_sensor.',w:28,h:28},
+  door_sensor:{name:'Door Sensor',icon:'fa-door-open',color:'#9c27b0',cat:'device',entity:'binary_sensor.',w:28,h:28},
+  alarm:{name:'Alarm',icon:'fa-bell',color:'#f44336',cat:'device',entity:'alarm_control_panel.',w:28,h:28},
+  thermostat:{name:'Thermostat',icon:'fa-temperature-half',color:'#03a9f4',cat:'device',entity:'climate.',w:28,h:28},
+  humidity:{name:'Humidity',icon:'fa-droplet',color:'#03a9f4',cat:'device',entity:'sensor.',w:28,h:28},
+  fan:{name:'Fan',icon:'fa-fan',color:'#03a9f4',cat:'device',entity:'fan.',w:28,h:28},
+  speaker:{name:'Speaker',icon:'fa-volume-high',color:'#ff9800',cat:'device',entity:'media_player.',w:28,h:28},
+  tv:{name:'TV',icon:'fa-tv',color:'#ff9800',cat:'device',entity:'media_player.',w:28,h:28},
+  plug:{name:'Plug',icon:'fa-plug',color:'#009688',cat:'device',entity:'switch.',w:28,h:28},
+  vacuum:{name:'Vacuum',icon:'fa-robot',color:'#607d8b',cat:'device',entity:'vacuum.',w:28,h:28},
+  blind:{name:'Blinds',icon:'fa-bars-staggered',color:'#009688',cat:'device',entity:'cover.',w:28,h:28},
+  garage:{name:'Garage',icon:'fa-warehouse',color:'#009688',cat:'device',entity:'cover.',w:28,h:28},
+  // Furniture
+  bed_double:{name:'Double Bed',icon:'fa-bed',color:'#8d6e63',cat:'furniture',w:80,h:60,shape:'rect'},
+  bed_single:{name:'Single Bed',icon:'fa-bed',color:'#8d6e63',cat:'furniture',w:50,h:60,shape:'rect'},
+  wardrobe:{name:'Wardrobe',icon:'fa-door-closed',color:'#795548',cat:'furniture',w:60,h:22,shape:'rect'},
+  nightstand:{name:'Nightstand',icon:'fa-box',color:'#a1887f',cat:'furniture',w:20,h:20,shape:'rect'},
+  sofa:{name:'Sofa',icon:'fa-couch',color:'#5c6bc0',cat:'furniture',w:80,h:35,shape:'rect'},
+  armchair:{name:'Armchair',icon:'fa-chair',color:'#7986cb',cat:'furniture',w:35,h:35,shape:'rect'},
+  coffee_table:{name:'Coffee Table',icon:'fa-table',color:'#90a4ae',cat:'furniture',w:50,h:30,shape:'rect'},
+  bookshelf:{name:'Bookshelf',icon:'fa-book-open',color:'#6d4c41',cat:'furniture',w:60,h:16,shape:'rect'},
+  tv_stand:{name:'TV Stand',icon:'fa-tv',color:'#546e7a',cat:'furniture',w:70,h:18,shape:'rect'},
+  rug:{name:'Rug',icon:'fa-square',color:'#b39ddb',cat:'furniture',w:80,h:60,shape:'rect',opacity:.35},
+  dining_table:{name:'Dining Table',icon:'fa-table',color:'#8d6e63',cat:'furniture',w:70,h:50,shape:'rect'},
+  chair:{name:'Chair',icon:'fa-chair',color:'#a1887f',cat:'furniture',w:18,h:18,shape:'rect'},
+  fridge:{name:'Fridge',icon:'fa-snowflake',color:'#cfd8dc',cat:'furniture',w:30,h:30,shape:'rect'},
+  stove:{name:'Stove',icon:'fa-fire-burner',color:'#455a64',cat:'furniture',w:30,h:30,shape:'rect'},
+  sink:{name:'Sink',icon:'fa-faucet-drip',color:'#b0bec5',cat:'furniture',w:25,h:20,shape:'rect'},
+  counter:{name:'Counter',icon:'fa-border-top-left',color:'#78909c',cat:'furniture',w:80,h:24,shape:'rect'},
+  shower:{name:'Shower',icon:'fa-shower',color:'#4dd0e1',cat:'furniture',w:40,h:40,shape:'rect'},
+  bathtub:{name:'Bathtub',icon:'fa-bath',color:'#e0f7fa',cat:'furniture',w:60,h:30,shape:'rect'},
+  toilet:{name:'Toilet',icon:'fa-toilet',color:'#eceff1',cat:'furniture',w:20,h:28,shape:'rect'},
+  basin:{name:'Basin',icon:'fa-faucet',color:'#b2ebf2',cat:'furniture',w:22,h:18,shape:'rect'},
+  desk:{name:'Desk',icon:'fa-desktop',color:'#7e57c2',cat:'furniture',w:60,h:30,shape:'rect'},
+  office_chair:{name:'Office Chair',icon:'fa-chair',color:'#9575cd',cat:'furniture',w:22,h:22,shape:'rect'},
+  plant:{name:'Plant',icon:'fa-leaf',color:'#66bb6a',cat:'furniture',w:18,h:18,shape:'circle'},
+  lamp:{name:'Floor Lamp',icon:'fa-regular fa-lightbulb',color:'#fff176',cat:'furniture',w:16,h:16,shape:'circle'}
+};
+
+// ── FLOOR / EDIT / SIDEBAR ────────────────────────────
+function switchFloor(f){
+  currentFloor=f;
+  document.querySelectorAll('.floor-tab').forEach(t=>t.classList.toggle('active',+t.dataset.floor===f));
+  document.querySelectorAll('.floor-container').forEach(c=>c.classList.toggle('active',+c.dataset.floor===f));
+  refreshPlacedList();
+}
+function toggleEditMode(){
+  editMode=!editMode;
+  const b=document.getElementById('btnEdit');
+  b.classList.toggle('active',editMode);
+  b.innerHTML=editMode?'<i class="fa-solid fa-check"></i> Done':'<i class="fa-solid fa-pen"></i> Edit';
+  document.getElementById('modeBadge').classList.toggle('show',editMode);
+}
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('hidden');
+}
+function switchPanel(p){
+  document.querySelectorAll('.sidebar-tab').forEach(t=>t.classList.toggle('active',t.dataset.panel===p));
+  document.querySelectorAll('.sidebar-panel').forEach(el=>el.classList.toggle('active',el.id==='panel-'+p));
+  if(p==='placed') refreshPlacedList();
+}
+
+// ── DRAG & DROP ───────────────────────────────────────
+document.querySelectorAll('.palette-item[draggable]').forEach(el=>{
+  el.addEventListener('dragstart',e=>{
+    e.dataTransfer.setData('text/plain',JSON.stringify({type:el.dataset.type,cat:el.dataset.cat}));
+    e.dataTransfer.effectAllowed='copy';
+  });
+});
+document.querySelectorAll('.floor-svg').forEach(svg=>{
+  svg.addEventListener('dragover',e=>{e.preventDefault();e.dataTransfer.dropEffect='copy'});
+  svg.addEventListener('drop',e=>{
+    e.preventDefault();
+    try{
+      const d=JSON.parse(e.dataTransfer.getData('text/plain'));
+      const r=svg.getBoundingClientRect(),vb=svg.viewBox.baseVal;
+      const x=((e.clientX-r.left)/r.width)*vb.width;
+      const y=((e.clientY-r.top)/r.height)*vb.height;
+      addItem(d.type,+svg.id.split('-')[1],x,y);
+    }catch(err){}
+  });
+});
+
+// ── ITEM MANAGEMENT ───────────────────────────────────
+function addItem(type,floor,x,y){
+  const def=DEFS[type]; if(!def) return;
+  const id='i'+(++idCtr);
+  const room=findRoom(floor,x,y)||'Unknown';
+  const item={id,type,name:def.name+' '+idCtr,floor,x,y,state:'off',entityId:(def.entity||'')+type+'_'+idCtr,cat:def.cat,color:def.color,icon:def.icon,w:def.w,h:def.h,shape:def.shape||'icon',opacity:def.opacity||.7,room,rotation:0};
+  items.push(item);
+  renderItem(item);
+  updateCount(); save(); refreshPlacedList();
+}
+
+function renderItem(item){
+  const svg=document.getElementById('svg-'+item.floor);
+  const layer=svg.querySelector('#'+(item.cat==='furniture'?'furniture':'devices')+'-'+item.floor);
+  const ns='http://www.w3.org/2000/svg';
+  const g=document.createElementNS(ns,'g');
+  g.setAttribute('class','marker '+(item.cat==='device'?item.state:''));
+  g.setAttribute('data-id',item.id);
+
+  if(item.cat==='furniture'){
+    // Furniture — render as a shape
+    const tx=item.x-item.w/2, ty=item.y-item.h/2;
+    g.setAttribute('transform',`translate(${tx},${ty})${item.rotation?' rotate('+item.rotation+','+item.w/2+','+item.h/2+')':''}`);
+    if(item.shape==='circle'){
+      const c=document.createElementNS(ns,'circle');
+      c.setAttribute('cx',item.w/2);c.setAttribute('cy',item.h/2);c.setAttribute('r',item.w/2);
+      c.setAttribute('fill',item.color);c.setAttribute('opacity',item.opacity);c.setAttribute('class','marker-bg');
+      g.appendChild(c);
+    } else {
+      const r=document.createElementNS(ns,'rect');
+      r.setAttribute('width',item.w);r.setAttribute('height',item.h);r.setAttribute('rx','3');
+      r.setAttribute('fill',item.color);r.setAttribute('opacity',item.opacity);r.setAttribute('class','marker-bg');
+      g.appendChild(r);
+    }
+    // Label
+    const t=document.createElementNS(ns,'text');
+    t.setAttribute('x',item.w/2);t.setAttribute('y',item.h/2);
+    t.setAttribute('text-anchor','middle');t.setAttribute('dominant-baseline','central');
+    t.setAttribute('fill','#fff');t.setAttribute('font-size',Math.min(10,item.w/5)+'px');t.setAttribute('font-weight','600');
+    t.setAttribute('pointer-events','none');t.textContent=item.name.replace(/ \d+$/,'');
+    g.appendChild(t);
+  } else {
+    // Device — icon marker
+    g.setAttribute('transform',`translate(${item.x-14},${item.y-14})`);
+    const bg=document.createElementNS(ns,'rect');
+    bg.setAttribute('class','marker-bg');bg.setAttribute('width','28');bg.setAttribute('height','28');bg.setAttribute('rx','7');
+    bg.setAttribute('fill',item.state==='on'?item.color:'#3a3d47');
+    g.appendChild(bg);
+    const fo=document.createElementNS(ns,'foreignObject');
+    fo.setAttribute('width','28');fo.setAttribute('height','28');
+    fo.innerHTML=`<div xmlns="http://www.w3.org/1999/xhtml" style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;pointer-events:none"><i class="fa-solid ${item.icon}" style="font-size:12px;color:#fff"></i></div>`;
+    g.appendChild(fo);
+  }
+
+  // Events
+  g.addEventListener('click',e=>{e.stopPropagation();if(!editMode && item.cat==='device') toggleItem(item.id)});
+  g.addEventListener('mouseenter',e=>showTip(e,item));
+  g.addEventListener('mouseleave',hideTip);
+  g.addEventListener('contextmenu',e=>{e.preventDefault();showCtx(e,item)});
+
+  // Drag in edit
+  let dragging=false,sx,sy;
+  g.addEventListener('mousedown',e=>{
+    if(!editMode) return;
+    dragging=true; sx=e.clientX; sy=e.clientY;
+    const svgR=svg.getBoundingClientRect(), vb=svg.viewBox.baseVal;
+    const onM=ev=>{
+      if(!dragging) return;
+      const dx=(ev.clientX-sx)/svgR.width*vb.width;
+      const dy=(ev.clientY-sy)/svgR.height*vb.height;
+      item.x+=dx; item.y+=dy; sx=ev.clientX; sy=ev.clientY;
+      if(item.cat==='furniture'){
+        g.setAttribute('transform',`translate(${item.x-item.w/2},${item.y-item.h/2})${item.rotation?' rotate('+item.rotation+','+item.w/2+','+item.h/2+')':''}`);
+      } else {
+        g.setAttribute('transform',`translate(${item.x-14},${item.y-14})`);
+      }
+    };
+    const onU=()=>{dragging=false;item.room=findRoom(item.floor,item.x,item.y)||item.room;save();document.removeEventListener('mousemove',onM);document.removeEventListener('mouseup',onU)};
+    document.addEventListener('mousemove',onM);document.addEventListener('mouseup',onU);
+    e.stopPropagation();
+  });
+
+  layer.appendChild(g);
+}
+
+function toggleItem(id){
+  const it=items.find(i=>i.id===id); if(!it||it.cat!=='device') return;
+  it.state=it.state==='on'?'off':'on';
+  const m=document.querySelector(`[data-id="${id}"]`);
+  if(m){m.classList.toggle('on',it.state==='on');m.classList.toggle('off',it.state==='off');
+    const bg=m.querySelector('.marker-bg');bg.setAttribute('fill',it.state==='on'?it.color:'#3a3d47');}
+  save(); refreshPlacedList();
+  // HA integration
+  if(haBaseUrl&&it.entityId) callHA(it.entityId,it.state==='on'?'turn_on':'turn_off');
+}
+
+function deleteItem(id){
+  items=items.filter(i=>i.id!==id);
+  const m=document.querySelector(`[data-id="${id}"]`);if(m) m.remove();
+  updateCount();save();refreshPlacedList();hideCtx();
+}
+
+function renameItem(id){
+  const it=items.find(i=>i.id===id);if(!it) return;
+  const n=prompt('Name:',it.name);if(n){it.name=n;save();refreshPlacedList();}hideCtx();
+}
+
+function rotateItem(id){
+  const it=items.find(i=>i.id===id);if(!it) return;
+  it.rotation=(it.rotation||0)+90;if(it.rotation>=360)it.rotation=0;
+  // Swap w/h for furniture
+  if(it.cat==='furniture'){const tmp=it.w;it.w=it.h;it.h=tmp;}
+  // Re-render
+  const m=document.querySelector(`[data-id="${id}"]`);if(m) m.remove();
+  renderItem(it);save();hideCtx();
+}
+
+function resizeItem(id){
+  const it=items.find(i=>i.id===id);if(!it||it.cat!=='furniture') return;
+  const w=prompt('Width:',it.w);const h=prompt('Height:',it.h);
+  if(w)it.w=+w;if(h)it.h=+h;
+  const m=document.querySelector(`[data-id="${id}"]`);if(m)m.remove();
+  renderItem(it);save();hideCtx();
+}
+
+function editEntity(id){
+  const it=items.find(i=>i.id===id);if(!it) return;
+  const e=prompt('HA Entity ID:',it.entityId);if(e){it.entityId=e;save();}hideCtx();
+}
+
+// ── ROOM HELPERS ──────────────────────────────────────
+function findRoom(floor,x,y){
+  const svg=document.getElementById('svg-'+floor);
+  for(const rm of svg.querySelectorAll('.room')){
+    const r=rm.querySelector('.room-fill');if(!r) continue;
+    const rx=+r.getAttribute('x'),ry=+r.getAttribute('y'),rw=+r.getAttribute('width'),rh=+r.getAttribute('height');
+    if(x>=rx&&x<=rx+rw&&y>=ry&&y<=ry+rh) return rm.dataset.room;
+  }
+  return null;
+}
+
+function selectRoom(el){
+  selectedRoomEl=el;
+  const name=el.dataset.room;
+  switchPanel('rooms');
+  document.getElementById('sidebar').classList.remove('hidden');
+  const roomItems=items.filter(i=>i.floor===currentFloor&&i.room===name);
+  document.getElementById('roomEditorContent').innerHTML=`
+    <div class="editor-field"><label>Room Name</label><input value="${name}" onchange="renameRoom(this.value)"></div>
+    <div class="editor-field"><label>Floor Color</label>
+      <div class="color-row">${['#c4b590','#a88c5e','#8a9aaa','#3a4a5a','#7a6e5a','#b0c4a8','#c9b8a8','#e8d8c8','#d4c9a8','#546e7a'].map(c=>`<div class="cswatch" style="background:${c}" onclick="colorRoom('${c}')"></div>`).join('')}</div>
+    </div>
+    <div class="editor-field"><label>Items in Room (${roomItems.length})</label>
+    ${roomItems.length?roomItems.map(d=>`<div class="placed-item"><div class="pi-icon" style="width:22px;height:22px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;background:${d.color}22;color:${d.color}"><i class="fa-solid ${d.icon}"></i></div><div class="pi-info"><div class="pi-name">${d.name}</div></div><div class="del-btn" onclick="deleteItem('${d.id}')"><i class="fa-solid fa-trash"></i></div></div>`).join(''):'<p style="font-size:10px;color:var(--ha-text-muted)">None yet</p>'}
+    </div>`;
+}
+function renameRoom(n){if(!selectedRoomEl) return;selectedRoomEl.dataset.room=n;const l=selectedRoomEl.querySelector('.room-label');if(l)l.textContent=n}
+function colorRoom(c){if(!selectedRoomEl) return;const f=selectedRoomEl.querySelector('.room-fill');if(f){f.setAttribute('fill',c);f.setAttribute('opacity','.7')}}
+
+// ── TOOLTIP & CONTEXT ─────────────────────────────────
+function showTip(e,it){
+  const tt=document.getElementById('tooltip');
+  const ca=document.getElementById('canvasArea').getBoundingClientRect();
+  tt.innerHTML=`<div class="tt-name">${it.name}</div><div class="tt-state" style="color:${it.cat==='device'?(it.state==='on'?it.color:'var(--ha-text-dim)'):it.color}">${it.cat==='device'?it.state.toUpperCase():it.cat} · ${it.room}</div>${it.entityId?`<div style="font-size:9px;color:var(--ha-text-muted);margin-top:2px">${it.entityId}</div>`:''}`;
+  tt.style.left=(e.clientX-ca.left+10)+'px';tt.style.top=(e.clientY-ca.top-10)+'px';tt.classList.add('show');
+}
+function hideTip(){document.getElementById('tooltip').classList.remove('show')}
+
+function showCtx(e,it){
+  const cm=document.getElementById('ctxMenu');
+  const ca=document.getElementById('canvasArea').getBoundingClientRect();
+  cm.style.left=(e.clientX-ca.left)+'px';cm.style.top=(e.clientY-ca.top)+'px';
+  let html='';
+  if(it.cat==='device') html+=`<div class="ctx-item" onclick="toggleItem('${it.id}');hideCtx()"><i class="fa-solid fa-power-off"></i> Toggle ${it.state==='on'?'Off':'On'}</div>`;
+  html+=`<div class="ctx-item" onclick="renameItem('${it.id}')"><i class="fa-solid fa-pen"></i> Rename</div>`;
+  html+=`<div class="ctx-item" onclick="rotateItem('${it.id}')"><i class="fa-solid fa-rotate-right"></i> Rotate 90°</div>`;
+  if(it.cat==='furniture') html+=`<div class="ctx-item" onclick="resizeItem('${it.id}')"><i class="fa-solid fa-up-right-and-down-left-from-center"></i> Resize</div>`;
+  if(it.cat==='device') html+=`<div class="ctx-item" onclick="editEntity('${it.id}')"><i class="fa-solid fa-link"></i> Entity ID</div>`;
+  html+=`<div class="ctx-divider"></div><div class="ctx-item danger" onclick="deleteItem('${it.id}')"><i class="fa-solid fa-trash"></i> Delete</div>`;
+  cm.innerHTML=html;cm.classList.add('show');e.stopPropagation();
+}
+function hideCtx(){document.getElementById('ctxMenu').classList.remove('show')}
+document.addEventListener('click',hideCtx);
+
+// ── PLACED LIST ───────────────────────────────────────
+function refreshPlacedList(){
+  const list=document.getElementById('placedList');
+  const floorItems=items.filter(i=>i.floor===currentFloor);
+  if(!floorItems.length){list.innerHTML='<p style="font-size:11px;color:var(--ha-text-dim);text-align:center;padding:20px">No items on this floor</p>';return;}
+  // Group by room
+  const byRoom={};
+  floorItems.forEach(i=>{if(!byRoom[i.room])byRoom[i.room]=[];byRoom[i.room].push(i)});
+  let html='';
+  for(const[room,ritems]of Object.entries(byRoom)){
+    html+=`<div class="palette-section-title" style="margin-top:10px">${room}</div>`;
+    ritems.forEach(d=>{
+      html+=`<div class="placed-item">
+        <div class="pi-icon" style="width:24px;height:24px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:10px;background:${d.color}22;color:${d.color}"><i class="fa-solid ${d.icon}"></i></div>
+        <div class="pi-info"><div class="pi-name">${d.name}</div><div class="pi-sub">${d.entityId||d.cat}</div></div>
+        ${d.cat==='device'?`<div class="toggle-sw ${d.state}" onclick="toggleItem('${d.id}');setTimeout(refreshPlacedList,50)"></div>`:''}
+        <div class="del-btn" onclick="deleteItem('${d.id}')"><i class="fa-solid fa-trash"></i></div>
+      </div>`;
+    });
+  }
+  list.innerHTML=html;
+}
+
+// ── PERSISTENCE ───────────────────────────────────────
+function save(){try{localStorage.setItem('ha3d',JSON.stringify({items,idCtr,haBaseUrl}))}catch(e){}}
+function load(){
+  try{
+    const d=JSON.parse(localStorage.getItem('ha3d'));
+    if(d&&d.items){items=d.items;idCtr=d.idCtr||0;haBaseUrl=d.haBaseUrl||'';
+      items.forEach(i=>renderItem(i));updateCount();refreshPlacedList();
+      if(haBaseUrl) document.getElementById('haUrl').textContent=haBaseUrl;
+    }
+  }catch(e){}
+}
+function exportConfig(){
+  const d=JSON.stringify({version:2,items,exported:new Date().toISOString(),haBaseUrl},null,2);
+  const b=new Blob([d],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='ha_dashboard_config.json';a.click();
+}
+function importConfig(){
+  const inp=document.createElement('input');inp.type='file';inp.accept='.json';
+  inp.onchange=e=>{const f=e.target.files[0];if(!f) return;const r=new FileReader();
+    r.onload=ev=>{try{const d=JSON.parse(ev.target.result);if(d.items){
+      items.forEach(i=>{const m=document.querySelector(`[data-id="${i.id}"]`);if(m)m.remove()});
+      items=d.items;idCtr=Math.max(...d.items.map(i=>parseInt(i.id.replace('i',''))||0),0);
+      if(d.haBaseUrl){haBaseUrl=d.haBaseUrl;document.getElementById('haUrl').textContent=haBaseUrl;}
+      items.forEach(i=>renderItem(i));updateCount();save();refreshPlacedList();
+      alert('Imported '+items.length+' items!');
+    }}catch(er){alert('Invalid file')}};r.readAsText(f)};
+  inp.click();
+}
+function updateCount(){document.getElementById('itemCount').textContent=items.length+' item'+(items.length!==1?'s':'')}
+
+// ── HA INTEGRATION ────────────────────────────────────
+function setHaUrl(){
+  const u=prompt('Home Assistant URL (e.g. https://your-instance.ui.nabu.casa):',haBaseUrl);
+  if(u){haBaseUrl=u.replace(/\/$/,'');document.getElementById('haUrl').textContent=haBaseUrl;save();
+    alert('HA URL set! To enable live control, also set a Long-Lived Access Token in the browser console:\n\nwindow.HA_TOKEN = "your_token"');}
+}
+function callHA(entityId,action){
+  if(!haBaseUrl||!window.HA_TOKEN) return;
+  const domain=entityId.split('.')[0];
+  fetch(`${haBaseUrl}/api/services/${domain}/${action}`,{
+    method:'POST',headers:{'Authorization':'Bearer '+window.HA_TOKEN,'Content-Type':'application/json'},
+    body:JSON.stringify({entity_id:entityId})
+  }).catch(e=>console.warn('HA call failed:',e));
+}
+
+// ── INIT ──────────────────────────────────────────────
+load();
+</script>
+
+
+</body></html>
